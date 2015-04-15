@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D0AC13B11ADCD628002BC6A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC13B01ADCD628002BC6A7 /* AppDelegate.swift */; };
-		D0AC13B31ADCD628002BC6A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC13B21ADCD628002BC6A7 /* ViewController.swift */; };
 		D0AC13B61ADCD628002BC6A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AC13B41ADCD628002BC6A7 /* Main.storyboard */; };
 		D0AC13B81ADCD628002BC6A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AC13B71ADCD628002BC6A7 /* Images.xcassets */; };
 		D0AC13BB1ADCD628002BC6A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0AC13B91ADCD628002BC6A7 /* LaunchScreen.xib */; };
 		D0AC13C71ADCD628002BC6A7 /* GitHubToGoRMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC13C61ADCD628002BC6A7 /* GitHubToGoRMTests.swift */; };
+		D0E45CC91ADF2C7E00A97D1C /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E45CC81ADF2C7E00A97D1C /* Protected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		D0AC13AB1ADCD628002BC6A7 /* GitHubToGoRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubToGoRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AC13AF1ADCD628002BC6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0AC13B01ADCD628002BC6A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0AC13B21ADCD628002BC6A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0AC13B51ADCD628002BC6A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0AC13B71ADCD628002BC6A7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0AC13BA1ADCD628002BC6A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D0AC13C01ADCD628002BC6A7 /* GitHubToGoRMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubToGoRMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AC13C51ADCD628002BC6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0AC13C61ADCD628002BC6A7 /* GitHubToGoRMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubToGoRMTests.swift; sourceTree = "<group>"; };
+		D0E45CC81ADF2C7E00A97D1C /* Protected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = ../Protected.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +77,10 @@
 		D0AC13AD1ADCD628002BC6A7 /* GitHubToGoRM */ = {
 			isa = PBXGroup;
 			children = (
+				D0E45CCC1ADF2CC900A97D1C /* Controller */,
+				D0E45CCB1ADF2CB300A97D1C /* View */,
+				D0E45CCA1ADF2CAA00A97D1C /* Model */,
 				D0AC13B01ADCD628002BC6A7 /* AppDelegate.swift */,
-				D0AC13B21ADCD628002BC6A7 /* ViewController.swift */,
-				D0AC13B41ADCD628002BC6A7 /* Main.storyboard */,
 				D0AC13B71ADCD628002BC6A7 /* Images.xcassets */,
 				D0AC13B91ADCD628002BC6A7 /* LaunchScreen.xib */,
 				D0AC13AE1ADCD628002BC6A7 /* Supporting Files */,
@@ -90,6 +91,7 @@
 		D0AC13AE1ADCD628002BC6A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0E45CC81ADF2C7E00A97D1C /* Protected.swift */,
 				D0AC13AF1ADCD628002BC6A7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +112,29 @@
 				D0AC13C51ADCD628002BC6A7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0E45CCA1ADF2CAA00A97D1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D0E45CCB1ADF2CB300A97D1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0AC13B41ADCD628002BC6A7 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D0E45CCC1ADF2CC900A97D1C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0AC13B31ADCD628002BC6A7 /* ViewController.swift in Sources */,
+				D0E45CC91ADF2C7E00A97D1C /* Protected.swift in Sources */,
 				D0AC13B11ADCD628002BC6A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +436,7 @@
 				D0AC13CC1ADCD628002BC6A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0AC13CD1ADCD628002BC6A7 /* Build configuration list for PBXNativeTarget "GitHubToGoRMTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +445,7 @@
 				D0AC13CF1ADCD628002BC6A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
