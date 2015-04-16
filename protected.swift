@@ -10,4 +10,4 @@ import Foundation
 
 let myClientID = "cd18b0b416f51c38c3e4"
 
-let myClientSecretKey = "3a3fb179d8e6548d0a347dc3b32783f7b5ea902a"
+let myClientSecretKey = "8f9ac91a9ee501eea893304b649f347888b3926e"
