@@ -129,13 +129,43 @@
                     <view key="view" contentMode="scaleToFill" id="QM2-4T-JNv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="quQ-oo-ruk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="oeN-gO-VLv">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchTableCell" id="tS6-xY-Gie">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tS6-xY-Gie" id="KSu-5L-EGC">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wFk-xq-ve9" firstAttribute="top" secondItem="quQ-oo-ruk" secondAttribute="bottom" id="EI5-8C-DYA"/>
+                            <constraint firstItem="quQ-oo-ruk" firstAttribute="leading" secondItem="QM2-4T-JNv" secondAttribute="leadingMargin" constant="-16" id="ODR-OC-NTd"/>
+                            <constraint firstItem="quQ-oo-ruk" firstAttribute="top" secondItem="QM2-4T-JNv" secondAttribute="topMargin" id="fgy-nk-eue"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="quQ-oo-ruk" secondAttribute="trailing" constant="-16" id="lhx-IX-ulB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mZ4-UC-TB4"/>
+                    <connections>
+                        <outlet property="mySearchBar" destination="oeN-gO-VLv" id="kiX-7V-6LS"/>
+                        <outlet property="mySearchTableView" destination="quQ-oo-ruk" id="jaQ-7O-vaw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmc-dT-sfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602" y="233"/>
+            <point key="canvasLocation" x="1955" y="237"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dCR-1r-OcX">
