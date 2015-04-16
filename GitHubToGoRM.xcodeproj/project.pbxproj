@@ -13,6 +13,11 @@
 		D0AC13BB1ADCD628002BC6A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0AC13B91ADCD628002BC6A7 /* LaunchScreen.xib */; };
 		D0AC13C71ADCD628002BC6A7 /* GitHubToGoRMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC13C61ADCD628002BC6A7 /* GitHubToGoRMTests.swift */; };
 		D0E45CC91ADF2C7E00A97D1C /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E45CC81ADF2C7E00A97D1C /* Protected.swift */; };
+		D0E45CD01ADF323B00A97D1C /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E45CCF1ADF323B00A97D1C /* MainMenuViewController.swift */; };
+		D0E45CD41ADF33D800A97D1C /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E45CD31ADF33D800A97D1C /* GitHubService.swift */; };
+		D0E45CD61ADF371400A97D1C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E45CD51ADF371400A97D1C /* Repository.swift */; };
+		D0E45CD81ADF3DB100A97D1C /* ReposSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E45CD71ADF3DB100A97D1C /* ReposSearchViewController.swift */; };
+		D0E45CDA1ADF6A6400A97D1C /* ReposJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E45CD91ADF6A6400A97D1C /* ReposJSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		D0AC13C51ADCD628002BC6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0AC13C61ADCD628002BC6A7 /* GitHubToGoRMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubToGoRMTests.swift; sourceTree = "<group>"; };
 		D0E45CC81ADF2C7E00A97D1C /* Protected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = ../Protected.swift; sourceTree = "<group>"; };
+		D0E45CCF1ADF323B00A97D1C /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		D0E45CD31ADF33D800A97D1C /* GitHubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubService.swift; path = ../GitHubService.swift; sourceTree = "<group>"; };
+		D0E45CD51ADF371400A97D1C /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = ../Repository.swift; sourceTree = "<group>"; };
+		D0E45CD71ADF3DB100A97D1C /* ReposSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReposSearchViewController.swift; path = ../ReposSearchViewController.swift; sourceTree = "<group>"; };
+		D0E45CD91ADF6A6400A97D1C /* ReposJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReposJSONParser.swift; path = ../ReposJSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,10 @@
 		D0E45CCA1ADF2CAA00A97D1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0E45CD91ADF6A6400A97D1C /* ReposJSONParser.swift */,
+				D0E45CD71ADF3DB100A97D1C /* ReposSearchViewController.swift */,
+				D0E45CD51ADF371400A97D1C /* Repository.swift */,
+				D0E45CD31ADF33D800A97D1C /* GitHubService.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -132,6 +146,7 @@
 		D0E45CCC1ADF2CC900A97D1C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0E45CCF1ADF323B00A97D1C /* MainMenuViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -237,7 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E45CD01ADF323B00A97D1C /* MainMenuViewController.swift in Sources */,
 				D0E45CC91ADF2C7E00A97D1C /* Protected.swift in Sources */,
+				D0E45CD61ADF371400A97D1C /* Repository.swift in Sources */,
+				D0E45CD41ADF33D800A97D1C /* GitHubService.swift in Sources */,
+				D0E45CDA1ADF6A6400A97D1C /* ReposJSONParser.swift in Sources */,
+				D0E45CD81ADF3DB100A97D1C /* ReposSearchViewController.swift in Sources */,
 				D0AC13B11ADCD628002BC6A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
