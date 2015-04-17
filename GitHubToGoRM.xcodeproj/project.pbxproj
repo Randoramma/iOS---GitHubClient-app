@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D06A1CE21AE17F820081CEDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06A1CE11AE17F820081CEDD /* Images.xcassets */; };
+		D06A1D121AE1CD430081CEDD /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D111AE1CD430081CEDD /* UserSearchViewController.swift */; };
+		D06A1D141AE1CF310081CEDD /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D131AE1CF310081CEDD /* UserCell.swift */; };
 		D083B36D1AE147E800DEE3C4 /* githublogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D083B36C1AE147E800DEE3C4 /* githublogo.jpg */; };
 		D0AC13B11ADCD628002BC6A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC13B01ADCD628002BC6A7 /* AppDelegate.swift */; };
 		D0AC13B61ADCD628002BC6A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AC13B41ADCD628002BC6A7 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		D06A1CE11AE17F820081CEDD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D06A1D111AE1CD430081CEDD /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
+		D06A1D131AE1CF310081CEDD /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = ../UserCell.swift; sourceTree = "<group>"; };
 		D083B36C1AE147E800DEE3C4 /* githublogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = githublogo.jpg; sourceTree = "<group>"; };
 		D0AC13AB1ADCD628002BC6A7 /* GitHubToGoRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubToGoRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AC13AF1ADCD628002BC6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +103,6 @@
 				D0E45CCB1ADF2CB300A97D1C /* View */,
 				D0E45CCA1ADF2CAA00A97D1C /* Model */,
 				D0AC13B01ADCD628002BC6A7 /* AppDelegate.swift */,
-				D0AC13B91ADCD628002BC6A7 /* LaunchScreen.xib */,
 				D0AC13AE1ADCD628002BC6A7 /* Supporting Files */,
 			);
 			path = GitHubToGoRM;
@@ -145,7 +148,9 @@
 		D0E45CCB1ADF2CB300A97D1C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D0AC13B91ADCD628002BC6A7 /* LaunchScreen.xib */,
 				D0AC13B41ADCD628002BC6A7 /* Main.storyboard */,
+				D06A1D131AE1CF310081CEDD /* UserCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 		D0E45CCC1ADF2CC900A97D1C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D06A1D111AE1CD430081CEDD /* UserSearchViewController.swift */,
 				D0E45CD71ADF3DB100A97D1C /* ReposSearchViewController.swift */,
 				D0E31DC51AE0038900C41923 /* LoginViewController.swift */,
 				D0E45CCF1ADF323B00A97D1C /* MainMenuViewController.swift */,
@@ -271,6 +277,8 @@
 				D0E31DC81AE0070600C41923 /* OAuthService.swift in Sources */,
 				D0E45CD81ADF3DB100A97D1C /* ReposSearchViewController.swift in Sources */,
 				D0AC13B11ADCD628002BC6A7 /* AppDelegate.swift in Sources */,
+				D06A1D141AE1CF310081CEDD /* UserCell.swift in Sources */,
+				D06A1D121AE1CD430081CEDD /* UserSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

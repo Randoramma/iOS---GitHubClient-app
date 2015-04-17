@@ -17,11 +17,11 @@ class LoginViewController: UIViewController {
   
   let floatingAnimationDuration : NSTimeInterval = 1.3
   let imageViewDropHeight : CGFloat = 7
-  
+
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      let imageView = UIImageView(frame: CGRect(x: imageViewX, y: imageViewY, width: imageViewWidth, height: imageViewHeight))
+  let imageView = UIImageView(frame: CGRect(x: imageViewX, y: imageViewY, width: imageViewWidth, height: imageViewHeight))
       imageView.image = UIImage(named: "githublogo")
       imageView.center = self.view.center
       
@@ -30,14 +30,17 @@ class LoginViewController: UIViewController {
       // animations
       UIView.animateWithDuration(floatingAnimationDuration, delay: 0, options: UIViewAnimationOptions.Repeat | UIViewAnimationOptions.Autoreverse, animations: { [unowned self]() -> Void in
         
-        imageView.center = CGPoint(x: imageView.center.x, y: imageView.center.y + self.imageViewDropHeight)
+        imageView.center.y = imageView.center.y - self.imageViewDropHeight
+        //imageView.center = CGPoint(x: imageView.center.x, y: imageView.center.y + self.imageViewDropHeight)
       }, completion: nil)
 
     } // ViewDidLoad
+  
+  
 
   @IBAction func myLoginPressed(sender: AnyObject) {
     // calling the class method from the OAuth class 
-    
+
     // object conforms to the AppDelegate class.
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let oAuthService = appDelegate.myOathService

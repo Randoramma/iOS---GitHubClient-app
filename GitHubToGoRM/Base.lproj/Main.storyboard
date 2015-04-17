@@ -56,6 +56,9 @@
                                                 <constraint firstAttribute="centerY" secondItem="VPs-dq-Jcw" secondAttribute="centerY" id="pXE-OR-k9u"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Epa-bT-wF2" kind="show" id="63G-is-wFa"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ji8-0Z-77s">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -119,6 +122,78 @@
             </objects>
             <point key="canvasLocation" x="1044" y="141"/>
         </scene>
+        <!--User Search View Controller-->
+        <scene sceneID="yKF-ef-Epx">
+            <objects>
+                <viewController id="Epa-bT-wF2" customClass="UserSearchViewController" customModule="GitHubToGoRM" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aCN-wX-1tg"/>
+                        <viewControllerLayoutGuide type="bottom" id="uoo-mR-azU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="06g-Ha-opE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-hC-3yN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t6k-qD-F5z">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xzr-Yg-cyK">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myUserSearchCell" id="7In-TW-0kC" customClass="UserCell" customModule="GitHubToGoRM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jsQ-xE-P42">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="jsQ-xE-P42" firstAttribute="top" secondItem="7In-TW-0kC" secondAttribute="topMargin" constant="-8" id="3Qv-np-U8f"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="jsQ-xE-P42" secondAttribute="trailing" constant="-8" id="G0q-W8-Ig1"/>
+                                            <constraint firstItem="jsQ-xE-P42" firstAttribute="leading" secondItem="7In-TW-0kC" secondAttribute="leadingMargin" constant="-8" id="XvS-iK-x6t"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="jsQ-xE-P42" secondAttribute="bottom" constant="-8" id="okI-Dw-7bu"/>
+                                        </constraints>
+                                        <size key="customSize" width="75" height="75"/>
+                                        <connections>
+                                            <outlet property="myUserImageView" destination="jsQ-xE-P42" id="1c6-c4-aBd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t6k-qD-F5z" firstAttribute="top" secondItem="Lhg-hC-3yN" secondAttribute="bottom" id="0nQ-QD-UFJ"/>
+                            <constraint firstItem="Lhg-hC-3yN" firstAttribute="leading" secondItem="06g-Ha-opE" secondAttribute="leadingMargin" constant="-16" id="3TQ-UP-Fvj"/>
+                            <constraint firstItem="uoo-mR-azU" firstAttribute="top" secondItem="t6k-qD-F5z" secondAttribute="bottom" id="5B6-0k-51b"/>
+                            <constraint firstItem="Lhg-hC-3yN" firstAttribute="top" secondItem="aCN-wX-1tg" secondAttribute="bottom" id="K19-3O-tuW"/>
+                            <constraint firstItem="t6k-qD-F5z" firstAttribute="leading" secondItem="06g-Ha-opE" secondAttribute="leadingMargin" constant="-16" id="eYV-82-a8N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t6k-qD-F5z" secondAttribute="trailing" constant="-16" id="pxp-ZE-oOU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lhg-hC-3yN" secondAttribute="trailing" constant="-16" id="uaE-py-5qK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myUserCollectionView" destination="t6k-qD-F5z" id="cPT-ZR-7gz"/>
+                        <outlet property="myUserSearchBar" destination="Lhg-hC-3yN" id="tgj-Yk-srb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxc-XU-XZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925" y="-138"/>
+        </scene>
         <!--Repos Search View Controller-->
         <scene sceneID="IKS-Yj-5Vy">
             <objects>
@@ -166,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmc-dT-sfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="151"/>
+            <point key="canvasLocation" x="1885" y="605"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="c7a-0Y-0tC">
