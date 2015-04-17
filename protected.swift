@@ -11,3 +11,11 @@ import Foundation
 let myClientID = "cd18b0b416f51c38c3e4"
 
 let myClientSecretKey = "8f9ac91a9ee501eea893304b649f347888b3926e"
+
+var myClientToken = "797f18e1dc7f80b06a535a164845676233effc2b"
+
+//
+//
+//setmyClientToken (theToken : String) {
+//  
+//}

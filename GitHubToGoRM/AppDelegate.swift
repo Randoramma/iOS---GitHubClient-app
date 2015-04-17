@@ -12,12 +12,34 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+  
+  let myOathService = OAuthService()
 
-
-  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+  // method is called when any other application is called by our application on the device.  
+  func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+    
+    // pass us back to the
+    self.myOathService.handleRedirect(url)
+    //myOathService.handleRedirect(url)
     return true
   }
+
+  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+    // look for a token inside the user defaults 
+    if let token = NSUserDefaults.standardUserDefaults().objectForKey("gitHubToken") as? String {
+      // if we dont have a token, the root vc must be the login VC.
+      if let currentRootVC = self.window?.rootViewController as? LoginViewController,
+        storyboard = currentRootVC.storyboard {
+          // if we have a token, we want the rootVC set equal to here.
+          let navVC =
+          storyboard.instantiateViewControllerWithIdentifier("mainMenuNav") as! UINavigationController
+          window?.rootViewController = navVC
+      }
+      
+    } // NSUserDefaults.standardUserDefaults()
+    return true
+  } // didFinishLaunchingWithOptions
 
   func applicationWillResignActive(application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

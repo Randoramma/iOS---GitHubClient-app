@@ -20,6 +20,9 @@ class GitHubService {
   // URL request must be copied accurately...
   let gitHubSearchRepoURL = "https://api.github.com/search/repositories"
   
+  // swift 1.2 singleton static property formatting.  Shared Github Service property.  
+  static let sharedGithubInstance : GitHubService = GitHubService()
+  
   // function creating the search request for a remote repository
   func fetchReposForSearch (searchTerm : String, completionHandler : ([Repository]?, String?) -> (Void)) {
     
@@ -28,10 +31,20 @@ class GitHubService {
     let queryString = "?q=\(searchTerm)"
     // construct query string
     let requestURL = gitHubSearchRepoURL + queryString
+    
     // converts the string representation to a NSURL object
     let url = NSURL(string: requestURL)
     // sets the NSURL to a request optional ready for searching a repos.
     let request = NSURLRequest(URL: url!)
+    
+    // sign our client request with the token.
+    if let token = NSUserDefaults.standardUserDefaults().objectForKey("gitHubToken") as? String {
+      let theURL = "https://api.github.com/user?access_token="
+      let theRequestURL = theURL + token
+      
+      
+    //  request.URL(NSString()
+    }
     
     // URL session is either using a delegate or closures.  We are not using a delegate so we need something to recieve the data.
     let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (theData, theResponse, theError) -> Void in
@@ -58,7 +71,7 @@ class GitHubService {
         
       } // NSHTTPURLResponse
       
-    }) // NSURLSession.sharedSession()
+    }) // NSURLSession.sharedSession
     // fires the request for data off.
     dataTask.resume()
   } // fetchReposForSearch
