@@ -14,6 +14,8 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
   
   @IBOutlet weak var myUserCollectionView: UICollectionView!
   
+  var users = [User]()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -26,12 +28,12 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
-    return 100
+    return self.users.count
   } // numberOfItemsInSection
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     
-    let theCell = collectionView.dequeueReusableCellWithReuseIdentifier("myUserSearchCell", forIndexPath: indexPath) as! UICollectionViewCell
+    let theCell = collectionView.dequeueReusableCellWithReuseIdentifier("myUserSearchCell", forIndexPath: indexPath) as! UserCell
     
     
     return theCell
