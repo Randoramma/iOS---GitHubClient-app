@@ -41,10 +41,8 @@ class GitHubService {
     if let token = NSUserDefaults.standardUserDefaults().objectForKey("gitHubToken") as? String {
       let theURL = "https://api.github.com/user?access_token="
       let theRequestURL = theURL + token
-      
-      
     //  request.URL(NSString()
-    }
+    } // objectForKey
     
     // URL session is either using a delegate or closures.  We are not using a delegate so we need something to recieve the data.
     let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (theData, theResponse, theError) -> Void in
@@ -59,11 +57,8 @@ class GitHubService {
           
           NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
             completionHandler(repos, nil)
-          })
-
-          
-          
-        }
+          }) // mainQueue
+        } // statusCode
         
         /*
         We now are communicating with GitHub's servers.  We generate the request, their server recieves the URL, parses it up and sends back a response based on this request between the ? and the end of the request.
@@ -75,4 +70,15 @@ class GitHubService {
     // fires the request for data off.
     dataTask.resume()
   } // fetchReposForSearch
+  
+  // method to contact GitHub API for user info 
+  
+  func fetchUsersForSearch ( search : String, completionHandler : [User]?, String?) {
+    
+    
+    // stopped here at 18:18:24
+    
+  } // fetchUsersForSearch
+  
+  
 }
