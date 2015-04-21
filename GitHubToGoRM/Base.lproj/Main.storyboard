@@ -169,6 +169,7 @@
                                         <size key="customSize" width="75" height="75"/>
                                         <connections>
                                             <outlet property="myUserImageView" destination="jsQ-xE-P42" id="1c6-c4-aBd"/>
+                                            <segue destination="Umw-L3-gj2" kind="show" identifier="showUserToUserDetail" id="2nv-k9-g0x"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -193,6 +194,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxc-XU-XZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1925" y="-138"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="CwG-s5-ziw">
+            <objects>
+                <viewController id="LRP-wN-FjM" customClass="WebViewController" customModule="GitHubToGoRM" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QCc-5r-AFk"/>
+                        <viewControllerLayoutGuide type="bottom" id="WLM-vd-7C1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ulF-sj-tww">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSj-Vp-2DH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2571" y="614"/>
+        </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="VCD-fn-gEv">
+            <objects>
+                <viewController id="Umw-L3-gj2" customClass="UserDetailViewController" customModule="GitHubToGoRM" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3kF-gv-mhl"/>
+                        <viewControllerLayoutGuide type="bottom" id="JNH-mt-Avy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7xY-Xf-s7z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zrE-oJ-hYA">
+                                <rect key="frame" x="263" y="64" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="2fZ-Cu-eGq"/>
+                                    <constraint firstAttribute="width" constant="75" id="s4v-7D-sdh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgl-dn-wOJ">
+                                <rect key="frame" x="263" y="164" width="37" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8mJ-VH-mml"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h53-7h-Ebm">
+                                <rect key="frame" x="263" y="206" width="37" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="nJ9-U1-wbk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JNH-mt-Avy" firstAttribute="top" secondItem="h53-7h-Ebm" secondAttribute="bottom" constant="373" id="Ntn-1V-652"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zrE-oJ-hYA" secondAttribute="trailing" constant="234" id="cb4-l2-y5Z"/>
+                            <constraint firstItem="zrE-oJ-hYA" firstAttribute="leading" secondItem="h53-7h-Ebm" secondAttribute="leading" id="j0d-DS-Yd5"/>
+                            <constraint firstItem="zrE-oJ-hYA" firstAttribute="leading" secondItem="sgl-dn-wOJ" secondAttribute="leading" id="kCc-i0-rDf"/>
+                            <constraint firstItem="h53-7h-Ebm" firstAttribute="top" secondItem="sgl-dn-wOJ" secondAttribute="bottom" constant="21" id="ltK-0P-F5P"/>
+                            <constraint firstItem="zrE-oJ-hYA" firstAttribute="top" secondItem="3kF-gv-mhl" secondAttribute="bottom" id="mIJ-Ew-QTt"/>
+                            <constraint firstItem="zrE-oJ-hYA" firstAttribute="leading" secondItem="7xY-Xf-s7z" secondAttribute="leadingMargin" constant="234" id="nzB-FS-5yi"/>
+                            <constraint firstItem="sgl-dn-wOJ" firstAttribute="top" secondItem="zrE-oJ-hYA" secondAttribute="bottom" constant="25" id="rSN-IX-lr6"/>
+                            <constraint firstAttribute="centerX" secondItem="zrE-oJ-hYA" secondAttribute="centerX" id="zOL-9n-QZa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cb4-l2-y5Z"/>
+                                <exclude reference="nzB-FS-5yi"/>
+                                <exclude reference="rSN-IX-lr6"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="myUserDetailImageView" destination="zrE-oJ-hYA" id="ZhT-HH-Qet"/>
+                        <outlet property="myUserDetailLocation" destination="h53-7h-Ebm" id="HGu-fL-npV"/>
+                        <outlet property="myUserDetailName" destination="sgl-dn-wOJ" id="MTM-Rw-vwY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6j-n1-paw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2464" y="-123"/>
         </scene>
         <!--Repos Search View Controller-->
         <scene sceneID="IKS-Yj-5Vy">
@@ -221,6 +308,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tS6-xY-Gie" id="KSu-5L-EGC">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="LRP-wN-FjM" kind="show" identifier="showMyWebView" id="MUC-qN-fHz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -73,11 +73,29 @@ class GitHubService {
   
   // method to contact GitHub API for user info 
   
-  func fetchUsersForSearch ( search : String, completionHandler : [User]?, String?) {
+  func fetchUsersForSearch (search : String, completionHandler : ([User]?, String?) -> (Void)) {
+
+    // our request we send to GitHub
+    let userSearchURL = "https://api.github.com/search/users?q="
+    let url = userSearchURL + search
+    let request = NSMutableURLRequest(URL: NSURL(string: url)!)
     
+    // sign our client request with the token.
+    if let token = NSUserDefaults.standardUserDefaults().objectForKey("gitHubToken") as? String {
+      let theURL = "https://api.github.com/user?access_token="
+      let theRequestURL = theURL + token
+      //  request.URL(NSString()
+    } // objectForKey
     
-    // stopped here at 18:18:24
-    
+    let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (theData, theResponse, error) -> Void in
+      let users = UserJSONParser.usersFromJSONData(theData)
+      
+      NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+        completionHandler(users, nil)
+      })
+    })
+    dataTask.resume()
+
   } // fetchUsersForSearch
   
   

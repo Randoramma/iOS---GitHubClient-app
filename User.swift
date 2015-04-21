@@ -11,10 +11,16 @@ import UIKit
 
 class User {
   
+  let login : String
+  let avatarURL : String
+  let htmlURL : String
+ // let name : String
+  var avatarImage : UIImage?
   
-  
-  
-  
-  
-  
+  init (theLogin : String, theAvatarURL : String, theHtmlURL : String, theName : String) {
+    login = theLogin
+    avatarURL = theAvatarURL
+    htmlURL = theHtmlURL
+   // name = theName
+  } // init
 }

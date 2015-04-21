@@ -11,6 +11,13 @@
 		D06A1D121AE1CD430081CEDD /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D111AE1CD430081CEDD /* UserSearchViewController.swift */; };
 		D06A1D141AE1CF310081CEDD /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D131AE1CF310081CEDD /* UserCell.swift */; };
 		D06A1D161AE1D4110081CEDD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D151AE1D4110081CEDD /* User.swift */; };
+		D06A1D1A1AE303A00081CEDD /* UserJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D191AE303A00081CEDD /* UserJSONParser.swift */; };
+		D06A1D1C1AE317720081CEDD /* ImageFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D1B1AE317720081CEDD /* ImageFetchService.swift */; };
+		D06A1D1E1AE321180081CEDD /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D1D1AE321180081CEDD /* UserDetailViewController.swift */; };
+		D06A1D201AE322070081CEDD /* ToUserDetailAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D1F1AE322070081CEDD /* ToUserDetailAnimationController.swift */; };
+		D06A1D241AE4ACF40081CEDD /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D231AE4ACF40081CEDD /* ImageResizer.swift */; };
+		D06A1D261AE4B9C40081CEDD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D251AE4B9C40081CEDD /* WebViewController.swift */; };
+		D06A1D281AE5531A0081CEDD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A1D271AE5531A0081CEDD /* StringExtensions.swift */; };
 		D083B36D1AE147E800DEE3C4 /* githublogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D083B36C1AE147E800DEE3C4 /* githublogo.jpg */; };
 		D0AC13B11ADCD628002BC6A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC13B01ADCD628002BC6A7 /* AppDelegate.swift */; };
 		D0AC13B61ADCD628002BC6A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AC13B41ADCD628002BC6A7 /* Main.storyboard */; };
@@ -41,6 +48,13 @@
 		D06A1D111AE1CD430081CEDD /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
 		D06A1D131AE1CF310081CEDD /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = ../UserCell.swift; sourceTree = "<group>"; };
 		D06A1D151AE1D4110081CEDD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
+		D06A1D191AE303A00081CEDD /* UserJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserJSONParser.swift; path = ../UserJSONParser.swift; sourceTree = "<group>"; };
+		D06A1D1B1AE317720081CEDD /* ImageFetchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFetchService.swift; path = ../ImageFetchService.swift; sourceTree = "<group>"; };
+		D06A1D1D1AE321180081CEDD /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		D06A1D1F1AE322070081CEDD /* ToUserDetailAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToUserDetailAnimationController.swift; sourceTree = "<group>"; };
+		D06A1D231AE4ACF40081CEDD /* ImageResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizer.swift; sourceTree = "<group>"; };
+		D06A1D251AE4B9C40081CEDD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D06A1D271AE5531A0081CEDD /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		D083B36C1AE147E800DEE3C4 /* githublogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = githublogo.jpg; sourceTree = "<group>"; };
 		D0AC13AB1ADCD628002BC6A7 /* GitHubToGoRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubToGoRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AC13AF1ADCD628002BC6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +95,7 @@
 		D0AC13A21ADCD628002BC6A7 = {
 			isa = PBXGroup;
 			children = (
+				D06A1D271AE5531A0081CEDD /* StringExtensions.swift */,
 				D0AC13AD1ADCD628002BC6A7 /* GitHubToGoRM */,
 				D0AC13C31ADCD628002BC6A7 /* GitHubToGoRMTests */,
 				D0AC13AC1ADCD628002BC6A7 /* Products */,
@@ -139,6 +154,9 @@
 		D0E45CCA1ADF2CAA00A97D1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D06A1D231AE4ACF40081CEDD /* ImageResizer.swift */,
+				D06A1D1B1AE317720081CEDD /* ImageFetchService.swift */,
+				D06A1D191AE303A00081CEDD /* UserJSONParser.swift */,
 				D06A1D151AE1D4110081CEDD /* User.swift */,
 				D0E31DC71AE0070600C41923 /* OAuthService.swift */,
 				D0E45CD91ADF6A6400A97D1C /* ReposJSONParser.swift */,
@@ -161,6 +179,9 @@
 		D0E45CCC1ADF2CC900A97D1C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D06A1D251AE4B9C40081CEDD /* WebViewController.swift */,
+				D06A1D1D1AE321180081CEDD /* UserDetailViewController.swift */,
+				D06A1D1F1AE322070081CEDD /* ToUserDetailAnimationController.swift */,
 				D06A1D111AE1CD430081CEDD /* UserSearchViewController.swift */,
 				D0E45CD71ADF3DB100A97D1C /* ReposSearchViewController.swift */,
 				D0E31DC51AE0038900C41923 /* LoginViewController.swift */,
@@ -271,6 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06A1D1A1AE303A00081CEDD /* UserJSONParser.swift in Sources */,
+				D06A1D261AE4B9C40081CEDD /* WebViewController.swift in Sources */,
 				D0E45CD01ADF323B00A97D1C /* MainMenuViewController.swift in Sources */,
 				D0E45CC91ADF2C7E00A97D1C /* protected.swift in Sources */,
 				D0E45CD61ADF371400A97D1C /* Repository.swift in Sources */,
@@ -278,11 +301,16 @@
 				D0E31DC61AE0038900C41923 /* LoginViewController.swift in Sources */,
 				D0E45CDA1ADF6A6400A97D1C /* ReposJSONParser.swift in Sources */,
 				D0E31DC81AE0070600C41923 /* OAuthService.swift in Sources */,
+				D06A1D1C1AE317720081CEDD /* ImageFetchService.swift in Sources */,
+				D06A1D201AE322070081CEDD /* ToUserDetailAnimationController.swift in Sources */,
 				D0E45CD81ADF3DB100A97D1C /* ReposSearchViewController.swift in Sources */,
+				D06A1D241AE4ACF40081CEDD /* ImageResizer.swift in Sources */,
 				D06A1D161AE1D4110081CEDD /* User.swift in Sources */,
+				D06A1D1E1AE321180081CEDD /* UserDetailViewController.swift in Sources */,
 				D0AC13B11ADCD628002BC6A7 /* AppDelegate.swift in Sources */,
 				D06A1D141AE1CF310081CEDD /* UserCell.swift in Sources */,
 				D06A1D121AE1CD430081CEDD /* UserSearchViewController.swift in Sources */,
+				D06A1D281AE5531A0081CEDD /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

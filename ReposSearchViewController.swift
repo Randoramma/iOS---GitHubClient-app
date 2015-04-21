@@ -38,6 +38,8 @@ class ReposSearchViewController: UIViewController, UITableViewDataSource, UISear
     return cell
   }
   
+  //MARK: UISearch bar delegate
+  
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
     
     mySearchBar.resignFirstResponder()
@@ -50,6 +52,23 @@ class ReposSearchViewController: UIViewController, UITableViewDataSource, UISear
         self.mySearchTableView.reloadData()
       }
     }) // fetchReposForSearch
+  }
+  
+  
+  func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+    // implement shake function here based on the return of the validCharacterURL
+    return text.validCharacterURL()
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    if segue.identifier == "showMyWebView" {
+      let destination = segue.destinationViewController as! WebViewController
+      
+      let indexPath = self.mySearchTableView.indexPathForSelectedRow()
+      let repo = self.myResults[indexPath!.row]
+      destination.mySelectedRepo = repo
+    }
   }
   
   
